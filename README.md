@@ -40,7 +40,7 @@ A mix of data engineers, analysts, and storytellers.
 
 | Contributor | Focus Area | Profile |
 | :--- | :--- | :--- |
-| **Mayank Sharma** | Project Lead & ETL | [@MAYANKSHARMA01010](https://github.com/MAYANKSHARMA01010) |
+| **Mayank Sharma** | Project Lead & ETL | [@MAYANKSHARMA01010](https://github.com/MAYANKSHARMA01010) · [🌐 Portfolio](https://mayank-sharma-dva-portfolio.vercel.app) |
 | **Manan Gilhotra** | EDA & Data Visualization | [@MananGilhotra](https://github.com/MananGilhotra) |
 | **Daniel Tayal** | Statistical Analysis | [@danieltayal07](https://github.com/danieltayal07) |
 | **Mayank Gupta** | Documentation & Quality | [@Mayank0875](https://github.com/Mayank0875) |

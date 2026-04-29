@@ -11,7 +11,7 @@ This directory centralizes the digital footprints of **Section A, Group 5**. Eac
 | **Daniel Tayal** | [🌐 View Live](https://portfolio-danie.netlify.app) | [📂 GitHub](https://github.com/danieltayal07/portfolio-dva-sample) |
 | **Mayank Gupta** | [🌐 View Live](https://dva-portfolio-jk67.onrender.com/) | [📂 GitHub](https://github.com/Mayank0875/DVA_Portfolio) |
 | **Manan Gilhotra** | [🌐 View Live](https://dva-prortfolio-eight.vercel.app/) | [📂 GitHub](https://github.com/MananGilhotra/DVA_Prortfolio) |
-| **Mayank Sharma** | *(Coming Soon)* | [📂 GitHub](https://github.com/MAYANKSHARMA01010/DVA_PORTFOLIO) |
+| **Mayank Sharma** | [🌐 View Live](https://mayank-sharma-dva-portfolio.vercel.app) | [📂 GitHub](https://github.com/MAYANKSHARMA01010/DVA_PORTFOLIO) |
 | **Vidhi Singhal** | — | — |
 | **Abhiraj Tripathi** | — | — |
 | **Khushi Batra** | — | — |
