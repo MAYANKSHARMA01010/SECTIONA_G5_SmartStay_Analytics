@@ -135,10 +135,10 @@ Create five separate worksheets for the top banner KPIs.
 - **Format:** Currency (e.g., $101.41).
 - **Label:** "Avg RevPAR".
 
-### KPI 4: Top 10% Revenue Threshold
+### KPI 4: 90th %ile Revenue
 - **Drag** `Top Earner Threshold` (or `estimated_revenue_l365d` set to Percentile 90) to Text.
-- **Format:** Currency (e.g., $86,000).
-- **Label:** "Top 10% Revenue Threshold".
+- **Format:** Currency (e.g., $85,978).
+- **Label:** "90th %ile Revenue".
 
 ### KPI 5: Superhost Revenue Premium
 - **Drag** `Superhost Revenue Premium %` to Text.
@@ -150,15 +150,15 @@ Create five separate worksheets for the top banner KPIs.
 
 ## 5. Step-by-Step: Building the Charts
 
-### Chart 1: Price vs Revenue Sweet Spot (Scatter Plot)
+### Chart 1: Price vs Revenue Sweet Spot (Binned Area Chart)
 *Goal: Find the optimal price range where revenue peaks.*
-- **Columns:** `price` (Continuous Dimension, or Average Measure)
+- **Columns:** `price` — Right-click → **Create Bins** → set bin size to **200** (bins: 0–200, 200–400, 400–600, 600–800, 800–1000+)
 - **Rows:** `estimated_revenue_l365d` (Average)
-- **Detail:** `listing_id` (so every dot is a property)
-- **Color:** `room_type` — Entire home `#FF5A5F` · Private room `#FC642D` · Hotel `#00A699` · Shared `#767676`
-- **Size:** `estimated_occupancy_l365d` (Demand)
-- **Analytics Pane:** Drag a **Trend Line** to the view.
-- **Insight to show:** The median price is $150; avg is $865.90 (skewed by luxury outliers). Revenue peaks in the Mid–Mid-High tier. Beyond $600/night, occupancy drops sharply (avg 20.3% overall).
+- **Mark type:** Change to **Area** (creates a filled curve) with a **Line** overlay for trend clarity.
+- **Color:** Airbnb Red gradient — `#FFB3B5` (low price bins) → `#FF5A5F` → `#E15759` (high price bins).
+- **Reference Line (optional):** Add a constant line at the median price bin (200 bin) to highlight the sweet spot zone.
+- **Tooltip:** Include Avg Revenue, Count of Listings, and Avg Occupancy for each price bin.
+- **Insight to show:** Revenue peaks in the $0–200 and $200–400 bins (Mid tier). Beyond the $600 bin, the area curve flattens sharply — confirming that Luxury pricing ($600+) does not proportionally increase revenue due to occupancy collapse.
 
 ### Chart 2: Revenue Distribution by Price Tier (Box & Whisker Plot)
 *Goal: Show the reality of earnings within different price categories.*
@@ -174,7 +174,7 @@ Create five separate worksheets for the top banner KPIs.
 - **Rows:** `neighbourhood_cleansed` (Sort Descending by RevPAR)
 - **Columns:** `revpar` (Average)
 - **Color:** `revpar` — sequential scale `#FFB3B5` (low) → `#FF5A5F` → `#E15759` (top RevPAR neighbourhoods)
-- **Reference Line:** Market median RevPAR = `$12.08` — dashed, color `#767676`
+- **Reference Line:** Market average RevPAR = `$101` — dashed, color `#767676`. *(Tip: Use the overall AVG([revpar]) as the reference value so it auto-updates with filters; `$12.08` was a prior dataset value and is no longer correct.)*
 - **Filter:** Keep Top 15 or Top 20 Neighbourhoods to avoid clutter.
 
 ### Chart 4: Revenue + Occupancy by Room Type (Dual-Axis Combo)
@@ -205,7 +205,7 @@ Create five separate worksheets for the top banner KPIs.
 +-----------------------------------------------------------------------+
 |                                  |                                    |
 |   Chart 1: Price vs Revenue      |   Chart 2: Box Plot                |
-|   Scatter Plot (Sweet Spot)      |   Revenue by Price Tier            |
+|   Binned Area Chart (Sweet Spot) |   Revenue by Price Tier            |
 |                                  |                                    |
 +-----------------------------------------------------------------------+
 |                                  |                                    |
@@ -218,6 +218,30 @@ Create five separate worksheets for the top banner KPIs.
 |                                                                       |
 +-----------------------------------------------------------------------+
 ```
+
+### Step 6a: Add Global Dashboard Filters (Do This First)
+Before adding charts, set up the four global quick-filters at the top of the dashboard:
+
+1. **Room Type Filter:**
+   - Open any chart sheet → drag `room_type` to the Filters shelf → right-click → **Show Filter**.
+   - On the dashboard, right-click the filter pill → **Apply to Worksheets → All Using This Data Source**.
+   - Style: Single-value dropdown or checkbox list.
+
+2. **Neighbourhood Filter:**
+   - Same steps using `neighbourhood_cleansed`.
+   - Style: Multi-value dropdown (list is long).
+
+3. **Superhost Filter:**
+   - Same steps using `host_is_superhost`.
+   - Alias values: `0` → "Regular Host", `1` → "Superhost".
+   - Style: Radio button (Single Value).
+
+4. **Price Range Filter:**
+   - Use `price` field → Filter → **Range of Values**.
+   - Set default range: $0–$600 to exclude extreme outliers from the view.
+   - Style: Range slider.
+
+> **Tip:** Place all four filter controls inside a **Horizontal Layout Container** pinned to the top of the dashboard for a clean bar appearance.
 
 ### Dashboard Actions (Crucial for Interactivity)
 1. **Filter Action (Neighbourhood):** 
@@ -237,12 +261,30 @@ Create five separate worksheets for the top banner KPIs.
 When presenting this dashboard, these are the narrative talking points you deliver:
 
 1. **The Revenue Sweet Spot — Mid to Mid-High Tier:**
-   *Insight:* The scatter plot reveals that median price is $150/night, but the avg is $865.90 — massively skewed by luxury outliers. The Mid ($75–150) and Mid-High ($150–300) tiers show the most consistent revenue. Beyond the Luxury tier (>$600), occupancy collapses below the market avg of 20.3%, erasing the price premium.
+   *Insight:* The binned price chart reveals a clear revenue peak in the $0–$400 range. The avg listing price is $865.90 — massively skewed by luxury outliers — while the median sits at $150/night. The Mid ($75–150) and Mid-High ($150–300) tiers produce the most consistent and high-volume revenue. Beyond the $600 bin, the revenue curve flattens sharply as occupancy collapses.
 2. **The Superhost Premium is Enormous — +143%:**
    *Insight:* Becoming a Superhost isn't just an ego boost — Superhosts earn **$58,810/yr vs $24,197/yr for regular hosts, a +143% revenue premium**. This is the single highest-ROI action any host can take. Invest in cleanliness, communication, and acceptance rate.
 3. **27.1% of Listings Earn Zero Revenue:**
    *Insight:* More than 1 in 4 listings generates absolutely no revenue. The heatmap reveals these are concentrated in specific neighbourhoods and price tiers — a critical signal for investors evaluating market entry risk.
-4. **RevPAR Gap: Parthum Wan ($699) vs Median ($12.08) — 57× Difference:**
-   *Insight:* The RevPAR bar chart exposes a massive location premium. Bangkok neighbourhoods (Parthum Wan, Bang Rak, Vadhana) dominate the top with RevPAR 10–57× above the market median. Location efficiency matters far more than nightly price.
-5. **Instant Book: More Bookings, Slightly Lower Rating:**
-   *Insight:* Instant Book listings show 21.7% occupancy vs 18.7% for non-IB — a meaningful 3% boost in demand. However, IB listings average a 4.74 rating vs 4.81 for non-IB. For revenue-maximising hosts, IB is worth enabling; for rating-focused Superhosts, the trade-off warrants caution.
+4. **RevPAR Gap: Parthum Wan leads across all 4 cities:**
+   *Insight:* This is a multi-city dataset (Amsterdam, Antwerp, Athens, Bangkok). The RevPAR bar chart exposes a massive location premium — Bangkok neighbourhoods (Parthum Wan, Bang Rak, Vadhana) dominate the top rankings, with RevPAR far above the market average of $101. Even within a single city, top neighbourhoods outperform bottom ones by 10× or more. Location efficiency matters far more than nightly price.
+
+> **Note:** Instant Book analysis (occupancy vs rating trade-off) belongs to **Dashboard 3** and has been removed from this dashboard's talking points.
+
+---
+
+## 8. Navigation Bar Setup
+
+Add a navigation bar at the top or bottom of the dashboard so users can move between dashboards.
+
+1. **Add a Horizontal Layout Container** spanning the full dashboard width at the very top (above the filter row) or at the very bottom.
+2. **Insert three Navigation Button objects** (Dashboard menu → Objects → Navigation):
+   - Button 1: `"Dashboard 1 — Market Overview"` → links to Dashboard 1.
+   - Button 2: `"Dashboard 2 — Revenue & Pricing"` (current — style as **active/selected**).
+   - Button 3: `"Dashboard 3 — Host Performance"` → links to Dashboard 3.
+3. **Style the container:**
+   - Background: `#FF5A5F` (Airbnb Red).
+   - Button text: White `#FFFFFF`, Bold, 11pt.
+   - Active button: Background `#E15759` (Deep Rose) to indicate current page.
+   - Padding: 8px vertical, 16px horizontal per button.
+4. **Optional:** Add the Airbnb logo (PNG image object) to the far-left of the nav bar for branding consistency.
