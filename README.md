@@ -41,9 +41,9 @@ A mix of data engineers, analysts, and storytellers.
 | Contributor | Focus Area | Profile |
 | :--- | :--- | :--- |
 | **Mayank Sharma** | Project Lead & ETL | [@MAYANKSHARMA01010](https://github.com/MAYANKSHARMA01010) · [🌐 Portfolio](https://mayank-sharma-dva-portfolio.vercel.app) |
-| **Manan Gilhotra** | EDA & Data Visualization | [@MananGilhotra](https://github.com/MananGilhotra) |
-| **Daniel Tayal** | Statistical Analysis | [@danieltayal07](https://github.com/danieltayal07) |
-| **Mayank Gupta** | Documentation & Quality | [@Mayank0875](https://github.com/Mayank0875) |
+| **Manan Gilhotra** | EDA & Data Visualization | [@MananGilhotra](https://github.com/MananGilhotra) · [🌐 Portfolio](https://dva-prortfolio-eight.vercel.app/) |
+| **Daniel Tayal** | Statistical Analysis | [@danieltayal07](https://github.com/danieltayal07) · [🌐 Portfolio](https://portfolio-danie.netlify.app) |
+| **Mayank Gupta** | Documentation & Quality | [@Mayank0875](https://github.com/Mayank0875) · [🌐 Portfolio](https://dva-portfolio-jk67.onrender.com/) |
 | **Vidhi Singhal** | Market Metrics | [@vidhisinghal0101](https://github.com/vidhisinghal0101) |
 | **Abhishek Tripathi** | Technical Architecture | [@abhiraj6386](https://github.com/abhiraj6386) · [🌐 Portfolio](https://abhiraj6386.github.io/analyst_portfolio/) |
 | **Khushi Batra** | Tableau Dashboarding | [@KHUSHI-612](https://github.com/KHUSHI-612) · [🌐 Portfolio](https://dva-portfolio-taupe.vercel.app/) |
