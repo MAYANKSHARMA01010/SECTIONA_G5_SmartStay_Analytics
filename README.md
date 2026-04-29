@@ -45,7 +45,7 @@ A mix of data engineers, analysts, and storytellers.
 | **Manan Gilhotra** | EDA & Data Visualization | [@MananGilhotra](https://github.com/MananGilhotra) · [🌐 Portfolio](https://dva-prortfolio-eight.vercel.app/) |
 | **Daniel Tayal** | Statistical Analysis | [@danieltayal07](https://github.com/danieltayal07) · [🌐 Portfolio](https://portfolio-danie.netlify.app) |
 | **Mayank Gupta** | Documentation & Quality | [@Mayank0875](https://github.com/Mayank0875) · [🌐 Portfolio](https://dva-portfolio-jk67.onrender.com/) |
-| **Vidhi Singhal** | Market Metrics | [@vidhisinghal0101](https://github.com/vidhisinghal0101) |
+| **Vidhi Singhal** | Market Metrics | [@vidhisinghal0101](https://github.com/vidhisinghal0101) · [🌐 Portfolio](https://portfolio-eta-wine-y6sh1qn66n.vercel.app/) |
 | **Abhishek Tripathi** | Technical Architecture | [@abhiraj6386](https://github.com/abhiraj6386) · [🌐 Portfolio](https://abhiraj6386.github.io/analyst_portfolio/) |
 | **Khushi Batra** | Tableau Dashboarding | [@KHUSHI-612](https://github.com/KHUSHI-612) · [🌐 Portfolio](https://dva-portfolio-taupe.vercel.app/) |
 
