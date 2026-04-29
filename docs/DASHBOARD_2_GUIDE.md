@@ -21,6 +21,65 @@ Pricing mistakes are the #1 silent revenue killer for hosts. This dashboard repl
 
 ---
 
+## 🎨 Airbnb Color Theme & Visual Standards
+
+Apply these colors **consistently across every chart, KPI tile, and tooltip** on this dashboard.
+
+### Core Palette
+| Role | Name | Hex | Use |
+|---|---|---|---|
+| 🔴 Primary Accent | Airbnb Red | `#FF5A5F` | Primary bars, KPI tile borders, key highlights |
+| 🩷 Secondary Pink | Rose Blush | `#FFB3B5` | Lighter fills, hover states, secondary accents |
+| 🟠 Warning / Mid | Warm Orange | `#FC642D` | Mid-tier values, moderate performers |
+| 🟢 Positive / High | Teal Green | `#00A699` | Top earners, high scores, positive deltas |
+| ⚫ Neutral / Low | Soft Grey | `#767676` | Reference lines, non-primary bars, labels |
+| ⚪ Background | Off-White | `#F7F7F7` | Dashboard canvas, KPI tile backgrounds |
+| 🖤 Body Text | Near-Black | `#484848` | All titles, labels, tooltips |
+| 🔺 Negative | Deep Rose | `#E15759` | Underperformers, zero-revenue zones |
+
+### How to Apply in Tableau
+1. **Dashboard Canvas Background:** `#F7F7F7` → Format → Dashboard → Background Color.
+2. **KPI Tile Styling:** White background with a `#FF5A5F` top-border accent (use a colored rectangle shape above each number tile).
+3. **Chart Titles:** Font `#484848`, Bold, 13pt. Sheet titles: uppercase.
+4. **Reference Lines:** Color `#767676`, dashed style, label font `#484848`.
+5. **Tooltips:** Dark background `#484848`, white text `#F7F7F7`, emoji icons for each field.
+6. **Navigation Bar:** Background `#FF5A5F`, button text white `#FFFFFF`.
+
+### Colour Scales
+| Scale Type | Low → High |
+|---|---|
+| Sequential Revenue | `#FFB3B5` → `#FF5A5F` → `#E15759` |
+| Sequential Score | `#F7F7F7` → `#767676` → `#484848` |
+| Diverging (vs avg) | `#E15759` (below) · `#767676` (at avg) · `#00A699` (above) |
+
+### Categorical: Room Type Colors
+| Room Type | Color | Hex |
+|---|---|---|
+| Entire home/apt | Airbnb Red | `#FF5A5F` |
+| Private room | Warm Orange | `#FC642D` |
+| Hotel room | Teal Green | `#00A699` |
+| Shared room | Soft Grey | `#767676` |
+
+### Categorical: Price Tier Colors
+| Tier | Color | Hex |
+|---|---|---|
+| Budget (<$75) | Soft Grey | `#767676` |
+| Mid ($75–150) | Rose Blush | `#FFB3B5` |
+| Mid-High ($150–300) | Warm Orange | `#FC642D` |
+| High ($300–600) | Airbnb Red | `#FF5A5F` |
+| Luxury (>$600) | Deep Rose | `#E15759` |
+
+### Categorical: Revenue Tier Colors
+| Tier | Color | Hex |
+|---|---|---|
+| No Revenue | Deep Rose | `#E15759` |
+| Low (<$5k) | Soft Grey | `#767676` |
+| Mid ($5k–20k) | Rose Blush | `#FFB3B5` |
+| High ($20k–50k) | Warm Orange | `#FC642D` |
+| Top Earner (>$50k) | Teal Green | `#00A699` |
+
+---
+
 ## 3. Calculated Fields to Create in Tableau
 
 Before building any visualizations, create these calculated fields in Tableau:
@@ -61,29 +120,29 @@ Create five separate worksheets for the top banner KPIs.
 ### KPI 1: Avg Estimated Revenue
 - **Drag** `estimated_revenue_l365d` to Text.
 - **Change Measure to:** Average.
-- **Format:** Currency (e.g., $18,432).
+- **Format:** Currency (e.g., $37,016).
 - **Label:** "Avg Annual Revenue".
 
 ### KPI 2: Median Occupancy Rate
 - **Drag** `Occupancy Rate %` to Text.
 - **Change Measure to:** Median.
-- **Format:** Percentage (e.g., 6.6%).
+- **Format:** Percentage (e.g., 8.2%).
 - **Label:** "Median Occupancy".
 
 ### KPI 3: Avg RevPAR
 - **Drag** `revpar` to Text.
 - **Change Measure to:** Average.
-- **Format:** Currency (e.g., $35.70).
+- **Format:** Currency (e.g., $101.41).
 - **Label:** "Avg RevPAR".
 
 ### KPI 4: Top 10% Revenue Threshold
 - **Drag** `Top Earner Threshold` (or `estimated_revenue_l365d` set to Percentile 90) to Text.
-- **Format:** Currency (e.g., $62,000).
+- **Format:** Currency (e.g., $86,000).
 - **Label:** "Top 10% Revenue Threshold".
 
 ### KPI 5: Superhost Revenue Premium
 - **Drag** `Superhost Revenue Premium %` to Text.
-- **Format:** Percentage (+23.0%).
+- **Format:** Percentage (+143.0%).
 - **Coloring (Optional):** Put the calculation on the Color mark (Green for positive).
 - **Label:** "Superhost Revenue Premium".
 
@@ -96,10 +155,10 @@ Create five separate worksheets for the top banner KPIs.
 - **Columns:** `price` (Continuous Dimension, or Average Measure)
 - **Rows:** `estimated_revenue_l365d` (Average)
 - **Detail:** `listing_id` (so every dot is a property)
-- **Color:** `room_type` (Entire home vs Private room)
+- **Color:** `room_type` — Entire home `#FF5A5F` · Private room `#FC642D` · Hotel `#00A699` · Shared `#767676`
 - **Size:** `estimated_occupancy_l365d` (Demand)
 - **Analytics Pane:** Drag a **Trend Line** to the view.
-- **Insight to show:** After ~$250/night, the revenue curve flattens. The sweet spot is $100–$250.
+- **Insight to show:** The median price is $150; avg is $865.90 (skewed by luxury outliers). Revenue peaks in the Mid–Mid-High tier. Beyond $600/night, occupancy drops sharply (avg 20.3% overall).
 
 ### Chart 2: Revenue Distribution by Price Tier (Box & Whisker Plot)
 *Goal: Show the reality of earnings within different price categories.*
@@ -107,15 +166,15 @@ Create five separate worksheets for the top banner KPIs.
 - **Rows:** `estimated_revenue_l365d` (Continuous)
 - **Detail:** `listing_id` (to generate the distribution dots)
 - **Analytics Pane:** Drag a **Box Plot** to the view.
-- **Color:** `price_tier`
+- **Color:** `price_tier` — Budget `#767676` · Mid `#FFB3B5` · Mid-High `#FC642D` · High `#FF5A5F` · Luxury `#E15759`
 - **Insight to show:** High price tiers have massive variance; budget tiers are highly concentrated.
 
 ### Chart 3: RevPAR by Neighbourhood (Horizontal Bar + Reference Line)
 *Goal: Rank neighbourhoods by pricing efficiency.*
 - **Rows:** `neighbourhood_cleansed` (Sort Descending by RevPAR)
 - **Columns:** `revpar` (Average)
-- **Color:** `revpar` (Sequential color scale, e.g., Green to Grey)
-- **Analytics Pane:** Drag an Average **Reference Line** across the entire table.
+- **Color:** `revpar` — sequential scale `#FFB3B5` (low) → `#FF5A5F` → `#E15759` (top RevPAR neighbourhoods)
+- **Reference Line:** Market median RevPAR = `$12.08` — dashed, color `#767676`
 - **Filter:** Keep Top 15 or Top 20 Neighbourhoods to avoid clutter.
 
 ### Chart 4: Revenue + Occupancy by Room Type (Dual-Axis Combo)
@@ -124,15 +183,14 @@ Create five separate worksheets for the top banner KPIs.
 - **Rows:** `estimated_revenue_l365d` (Average) AND `Occupancy Rate %` (Average)
 - **Setup Dual Axis:** Right-click the second measure on the Rows shelf -> Dual Axis.
 - **Synchronize Axes:** No (because one is $, one is %).
-- **Marks Card:** Set Revenue to **Bar**, set Occupancy to **Line** with circles.
-- **Color:** Different colors for the Bar and Line to contrast.
+- **Marks Card:** Set Revenue to **Bar** (`#FF5A5F`), set Occupancy to **Line** with circles (`#00A699`).
 
 ### Chart 5: Revenue Concentration Heatmap (Highlight Table)
 *Goal: Show where the top-earning properties are clustered geographically.*
 - **Columns:** `revenue_tier` (Low, Mid, High, Top Earner)
 - **Rows:** `neighbourhood_cleansed` (Top 20)
 - **Text:** `listing_id` (Count)
-- **Color:** `listing_id` (Count) — Change mark type to Square to create the highlight table.
+- **Color:** `listing_id` (Count) — sequential `#FFB3B5` (few) → `#FF5A5F` → `#E15759` (many/concentrated).
 
 ---
 
@@ -178,13 +236,13 @@ Create five separate worksheets for the top banner KPIs.
 
 When presenting this dashboard, these are the narrative talking points you deliver:
 
-1. **The $100-$250 "Sweet Spot":**
-   *Insight:* The scatter plot proves that charging more than $250/night yields diminishing returns. Hosts pricing at $300+ are severely hurting their occupancy, causing lower total annual revenue than those pricing at $150.
-2. **The "Superhost" Premium is Real:**
-   *Insight:* Becoming a Superhost isn't just an ego boost—it equates to an average **+23% increase in revenue**. This justifies spending money on better cleaning services and premium amenities.
-3. **RevPAR Exposes the Real Winners:**
-   *Insight:* Some neighbourhoods have lower nightly rates but incredibly high occupancy, resulting in a higher RevPAR. Property Managers should focus their acquisitions on high-RevPAR areas, not just areas with high nightly prices.
-4. **Instant Book Drives Velocity:**
-   *Insight:* Listings with Instant Book enabled have significantly higher occupancy percentages, maintaining strong revenue streams without needing to discount prices.
-5. **The Luxury Trap:**
-   *Insight:* The Box Plot shows that "Luxury" price tiers have massive variance. While the ceiling is high, many luxury properties earn exactly the same as "Mid-High" properties due to lack of bookings. Consistency is found in the Mid to Mid-High tiers.
+1. **The Revenue Sweet Spot — Mid to Mid-High Tier:**
+   *Insight:* The scatter plot reveals that median price is $150/night, but the avg is $865.90 — massively skewed by luxury outliers. The Mid ($75–150) and Mid-High ($150–300) tiers show the most consistent revenue. Beyond the Luxury tier (>$600), occupancy collapses below the market avg of 20.3%, erasing the price premium.
+2. **The Superhost Premium is Enormous — +143%:**
+   *Insight:* Becoming a Superhost isn't just an ego boost — Superhosts earn **$58,810/yr vs $24,197/yr for regular hosts, a +143% revenue premium**. This is the single highest-ROI action any host can take. Invest in cleanliness, communication, and acceptance rate.
+3. **27.1% of Listings Earn Zero Revenue:**
+   *Insight:* More than 1 in 4 listings generates absolutely no revenue. The heatmap reveals these are concentrated in specific neighbourhoods and price tiers — a critical signal for investors evaluating market entry risk.
+4. **RevPAR Gap: Parthum Wan ($699) vs Median ($12.08) — 57× Difference:**
+   *Insight:* The RevPAR bar chart exposes a massive location premium. Bangkok neighbourhoods (Parthum Wan, Bang Rak, Vadhana) dominate the top with RevPAR 10–57× above the market median. Location efficiency matters far more than nightly price.
+5. **Instant Book: More Bookings, Slightly Lower Rating:**
+   *Insight:* Instant Book listings show 21.7% occupancy vs 18.7% for non-IB — a meaningful 3% boost in demand. However, IB listings average a 4.74 rating vs 4.81 for non-IB. For revenue-maximising hosts, IB is worth enabling; for rating-focused Superhosts, the trade-off warrants caution.
