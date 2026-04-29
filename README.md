@@ -45,7 +45,7 @@ A mix of data engineers, analysts, and storytellers.
 | **Daniel Tayal** | Statistical Analysis | [@danieltayal07](https://github.com/danieltayal07) |
 | **Mayank Gupta** | Documentation & Quality | [@Mayank0875](https://github.com/Mayank0875) |
 | **Vidhi Singhal** | Market Metrics | [@vidhisinghal0101](https://github.com/vidhisinghal0101) |
-| **Abhiraj Tripathi** | Technical Architecture | [@abhiraj6386](https://github.com/abhiraj6386) |
+| **Abhishek Tripathi** | Technical Architecture | [@abhiraj6386](https://github.com/abhiraj6386) · [🌐 Portfolio](https://abhiraj6386.github.io/analyst_portfolio/) |
 | **Khushi Batra** | Tableau Dashboarding | [@KHUSHI-612](https://github.com/KHUSHI-612) · [🌐 Portfolio](https://dva-portfolio-taupe.vercel.app/) |
 
 > 🔗 **[Team Resumes](DVA-oriented-Resume/README.md)** · **[Team Portfolios](DVA-focused-Portfolio/README.md)**

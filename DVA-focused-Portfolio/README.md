@@ -13,7 +13,7 @@ This directory centralizes the digital footprints of **Section A, Group 5**. Eac
 | **Manan Gilhotra** | [🌐 View Live](https://dva-prortfolio-eight.vercel.app/) | [📂 GitHub](https://github.com/MananGilhotra/DVA_Prortfolio) |
 | **Mayank Sharma** | [🌐 View Live](https://mayank-sharma-dva-portfolio.vercel.app) | [📂 GitHub](https://github.com/MAYANKSHARMA01010/DVA_PORTFOLIO) |
 | **Vidhi Singhal** | — | — |
-| **Abhiraj Tripathi** | — | — |
+| **Abhishek Tripathi** | [🌐 View Live](https://abhiraj6386.github.io/analyst_portfolio/) | [📂 GitHub](https://github.com/abhiraj6386/analyst_portfolio) |
 | **Khushi Batra** | [🌐 View Live](https://dva-portfolio-taupe.vercel.app/) | [📂 GitHub](https://github.com/KHUSHI-612/dva_portfolio) |
 
 ---

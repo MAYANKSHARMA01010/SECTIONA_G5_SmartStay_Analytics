@@ -13,7 +13,7 @@ This folder contains links to the professional resumes of the **SmartStay Analyt
 | **Manan Gilhotra** | [📄 Google Drive](https://drive.google.com/file/d/15-ZkzoQhSKS6VJoKVXpTLRPJP7FCoPzw/view?usp=sharing) |
 | **Mayank Sharma** | [📄 Google Drive](https://drive.google.com/drive/folders/1hyAqW57kYWOFdjWLKunGz9ghxRdwRbW_?usp=sharing) |
 | **Vidhi Singhal** | — |
-| **Abhiraj Tripathi** | — |
+| **Abhishek Tripathi** | [📄 Google Drive](https://drive.google.com/file/d/1jauNcYzJsUEzsvxZEk29En_QKft3lrK3/view?usp=sharing) |
 | **Khushi Batra** | [📄 Google Drive](https://drive.google.com/file/d/1e9NfvUzkGcr-sfFOjeTunCWADFwY25H5/view?usp=sharing) |
 
 ---
