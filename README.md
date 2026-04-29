@@ -16,6 +16,8 @@ Our goal was simple but ambitious: instead of just looking at numbers, we wanted
 - `scripts/`: Production-ready ETL pipeline.
 - `tableau/`: Visualization workbooks and dashboards.
 - `reports/`: Project outlines and final reports.
+- [`DVA-focused-Portfolio/`](DVA-focused-Portfolio/README.md): Team portfolio links (live sites & GitHub repos).
+- [`DVA-oriented-Resume/`](DVA-oriented-Resume/README.md): Team resume links (Google Drive & Docs).
 
 ## 🚀 Analysis Workflow
 1.  **Extraction:** Loading raw scrape data from Inside Airbnb.
@@ -44,6 +46,21 @@ We have prepared a `tableau_ready.csv` that includes advanced business metrics:
 *   **RevPAR:** Revenue Per Available Room (Standard industry benchmark).
 *   **Investment Potential:** A weighted score (0-100) to identify top property opportunities.
 *   **Market Segmentation:** Categorized price, revenue, and quality tiers.
+
+## 👥 The Team — Section A, Group 5
+
+| Contributor | Role | Profile | Resume | Portfolio |
+| :--- | :--- | :--- | :--- | :--- |
+| <img src="https://github.com/MAYANKSHARMA01010.png?size=80" width="80"><br>**Mayank Sharma** | **Project Lead** | [@MAYANKSHARMA01010](https://github.com/MAYANKSHARMA01010) | [📄 Resume](https://drive.google.com/drive/folders/1hyAqW57kYWOFdjWLKunGz9ghxRdwRbW_?usp=sharing) | [🌐 Portfolio](https://github.com/MAYANKSHARMA01010/DVA_PORTFOLIO) |
+| <img src="https://github.com/MananGilhotra.png?size=80" width="80"><br>**Manan Gilhotra** | **Data Wizard** | [@MananGilhotra](https://github.com/MananGilhotra) | [📄 Resume](https://drive.google.com/file/d/15-ZkzoQhSKS6VJoKVXpTLRPJP7FCoPzw/view?usp=sharing) | [🌐 Portfolio](https://dva-prortfolio-eight.vercel.app/) |
+| <img src="https://github.com/BLOODWYROM.png?size=80" width="80"><br>**Aditya Rao** | **Viz Specialist** | [@BLOODWYROM](https://github.com/BLOODWYROM) | — | — |
+| <img src="https://github.com/tayaldaniel2.png?size=80" width="80"><br>**Daniel Tayal** | **Research Guru** | [@tayaldaniel2](https://github.com/tayaldaniel2) | [📄 Resume](https://docs.google.com/document/d/17bhjIa4_JcdxQv4MC1QkrR3BNgHRHKdZyqFWiCVix2g/edit?usp=sharing) | [🌐 Portfolio](https://portfolio-danie.netlify.app) |
+| <img src="https://github.com/VidhiSinghal102.png?size=80" width="80"><br>**Vidhi Singhal** | **Stats Master** | [@VidhiSinghal102](https://github.com/VidhiSinghal102) | — | — |
+| <img src="https://github.com/abhiraj6386.png?size=80" width="80"><br>**Abhiraj Tripathi** | **Technical Architect** | [@abhiraj6386](https://github.com/abhiraj6386) | — | — |
+| <img src="https://github.com/khushibatra306.png?size=80" width="80"><br>**Khushi Batra** | **Market Analyst** | [@khushibatra306](https://github.com/khushibatra306) | — | — |
+| <img src="https://github.com/Mayank0875.png?size=80" width="80"><br>**Mayank Gupta** | **Documentation Lead** | [@Mayank0875](https://github.com/Mayank0875) | [📄 Resume](https://drive.google.com/file/d/16z82iqcc3aQewy2rVgxbtzI5AF0haK05/view?usp=sharing) | [🌐 Portfolio](https://dva-portfolio-jk67.onrender.com/) |
+
+> 📁 Full details → **[Portfolio Links](DVA-focused-Portfolio/README.md)** · **[Resume Links](DVA-oriented-Resume/README.md)**
 
 ---
 *Built with some late nights and a lot of coffee by Group 5 for our DVA Capstone 2 Project.*
