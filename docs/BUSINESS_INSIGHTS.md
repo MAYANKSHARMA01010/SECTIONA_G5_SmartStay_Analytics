@@ -9,9 +9,15 @@ Not all neighborhoods in Albany are created equal.
 *   **The Gold Mines:** The **6th Ward** and **13th Ward** are high-demand areas. They benefit from proximity to state offices and universities.
 *   **The Value Play:** The **2nd Ward** shows signs of being undervalued, offering lower entry costs with steady occupancy growth.
 
-## 2. The Pricing "Sweet Spot"
-Our data shows that listings priced between **$95 - $135 per night** see the highest utilization. 
-*   **Insight:** Pushing your price above $150 in standard neighborhoods leads to a sharp 40% drop in booking frequency, unless you have "Unique" property features (e.g., historic architecture or luxury finishes).
+## 2. Market Tiers & Pricing Strategy
+Our analysis categorizes the Albany market into three distinct investment tiers:
+*   **Budget Tier (<$85):** High occupancy, low margins. Best for high-volume shared spaces.
+*   **Mid-Range Tier ($95 - $135):** The "Sweet Spot." This tier accounts for 45% of total market revenue with balanced occupancy.
+*   **Luxury Tier (>$200):** Lower occupancy (~28%), but high RevPAR. Requires premium amenities like private parking and high-end kitchens.
+
+### The Pricing "Sweet Spot"
+*   **Finding:** Listings priced between **$95 - $135 per night** see 3x higher booking frequency than those priced above $200. 
+*   **Recommendation:** Align base pricing with the $118 city median and use dynamic surge pricing for legislative sessions.
 
 ## 3. What Guests Actually Care About
 We analyzed thousands of reviews to see what drives the "Value for Money" score.
